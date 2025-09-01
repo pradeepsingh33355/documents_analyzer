@@ -21,11 +21,7 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-```
-
-LanguageTool runs in serverless mode by default. If you want to point to a local LanguageTool server, set env:
-```
-LANGUAGETOOL_URL=http://localhost:8081
+java -cp "languagetool-server.jar:libs/*" org.languagetool.server.HTTPServer --port 8081(run LanguageTool)
 ```
 
 ## API
