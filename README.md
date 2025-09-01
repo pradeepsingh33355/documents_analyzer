@@ -12,7 +12,7 @@ This project implements an API that:
 - Basic **unit tests**
 
 ## Tech
-FastAPI, PyMuPDF, python-docx, language-tool-python, textstat
+FastAPI, PyMuPDF, python-docx, language-tool-python, textstat,LLM(Opoen AI)
 
 ## Setup
 
