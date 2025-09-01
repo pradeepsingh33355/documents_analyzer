@@ -69,9 +69,29 @@ Returns compliance report:
 Optional JSON body:
 ```json
 {
-  "target_reading_ease": 60,
-  "max_sentence_length": 20,
-  "tone": "neutral|formal|simple"
+    "doc_id": "10",
+    "overall": "Needs Improvement",
+    "issues": [
+        
+        {
+            "message": "Possible spelling mistake found.",
+            "offset": 817,
+            "length": 6,
+            "context": {
+                "text": "...ibility: Directly feed JSON from LLM to Plotly • No HTML File Handling: Avoids local H...",
+                "offset": 43,
+                "length": 6
+            },
+            "rule": "MORFOLOGIK_RULE_EN_US"
+        }
+        
+    ],
+    "guideline_notes": [
+        "Aim for Flesch Reading Ease >= 60 (higher is easier).",
+        "Keep average sentence length <= 20 words.",
+        "Avoid grammar and spelling mistakes.",
+        "Prefer active voice and clear phrasing (heuristic)."
+    ]
 }
 ```
 Returns a corrected `.docx` file as attachment.
