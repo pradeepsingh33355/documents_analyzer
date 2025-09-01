@@ -96,10 +96,6 @@ Optional JSON body:
 ```
 Returns a corrected `.docx` file as attachment.
 
-## Testing
-```bash
-pytest -q
-```
 
 ## Notes
 - If `OPENAI_API_KEY` is set, the service will attempt to use OpenAI for higher-quality rewrites; otherwise it falls back to rule-based corrections via LanguageTool + heuristics.
